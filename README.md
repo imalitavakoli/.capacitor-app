@@ -1,21 +1,49 @@
 # capacitor-app
 
-⚡️ Capacitor app template to create a minimal, reproducible example.
+🐞 Bug report
 
-This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app), and comes with a very minimal shell for building an app.
+This app was created to simulate the bug of the following plugins:
 
-This template only support the web platform by default.
-If you need the Android or iOS platform for your example, simply add it via the [Capacitor CLI](https://capacitorjs.com/docs/cli):
+- `@capawesome/capacitor-android-edge-to-edge-support` (V8.0.6).
+
+## Current behavior
+
+When keyboard opens in Android devices, an extra space causes the app content to go all the way up.
+
+## Expected behavior
+
+When keyboard opens in Android devices, no extra space should appear to hide the app content.
+
+## Steps to reproduce
+
+- Click on the input field.
+- As soon as the keyboard gets opened, extra space appears at the bottom of the screen and hides the app content.
+
+### Example
+
+To run the provided example, do the following:
+
+- Run `npm install` to install local decencies.
+- Run `npm run build` to build the app (generate `/dist` directory).
+- Run `npx cap sync` to sync the Android (`/android`) project.
+- Open the Android project in AndroidStudio, and click "Debug app".
+
+## Capacitor doctor
+
+Her's the output of `npx cap doctor` command:
 
 ```
-npm install @capacitor/<platform>
-npx cap add <platform>
-```
+Latest Dependencies:
 
-## Running this example
+  @capacitor/cli: 8.3.0
+  @capacitor/core: 8.3.0
+  @capacitor/android: 8.3.0
+  @capacitor/ios: 8.3.0
 
-To run the provided example, you can use `npm start` command.
+Installed Dependencies:
 
-```bash
-npm start
+  @capacitor/ios: not installed
+  @capacitor/cli: 8.3.0
+  @capacitor/core: 8.3.0
+  @capacitor/android: 8.3.0
 ```
