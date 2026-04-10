@@ -6,6 +6,20 @@
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0
+    },
+    
+    "EdgeToEdge": {
+      "backgroundColor": "#ff0000"
+    },
+
+    "Keyboard": {
+      "resize": "none",
+      "style": "default",
+      "resizeOnFullScreen": false
+    },
+
+    "SystemBars": {
+      "insetsHandling": "disable"
     }
   }
 }
