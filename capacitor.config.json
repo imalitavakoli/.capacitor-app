@@ -4,6 +4,11 @@
   "bundledWebRuntime": false,
   "webDir": "dist",
   "plugins": {
+    "StatusBar": {
+      "overlaysWebView": false,
+      "style": "DARK"
+    },
+
     "SplashScreen": {
       "launchShowDuration": 0
     }

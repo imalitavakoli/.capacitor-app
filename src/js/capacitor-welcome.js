@@ -1,5 +1,6 @@
 import { Browser } from "@capacitor/browser";
 import { SplashScreen } from "@capacitor/splash-screen";
+import { StatusBar, Style } from "@capacitor/status-bar";
 
 window.customElements.define(
   "capacitor-welcome",
@@ -9,6 +10,24 @@ window.customElements.define(
 
       SplashScreen.hide();
 
+      //////////////////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////////////////
+      // Our Tests
+      
+      setTimeout(async () => {
+        // If in `capacitor.config.json` we would have `"style": "DARK"` or 
+        // `"style": "DEFAULT"`, and then we call `setStyle`, we don't have any 
+        // effect!
+        await StatusBar.setStyle({ style: Style.Light });
+        console.log('New status-bar style applied!');
+        
+      }, 5000);
+
+      //////////////////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////////////////
+      
       const root = this.attachShadow({ mode: "open" });
       root.innerHTML = `
     <main>
